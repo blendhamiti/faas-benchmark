@@ -1,0 +1,39 @@
+swagger: '2.0'
+info:
+  title: Test API
+  version: '1.0'
+paths:
+  /users:
+    post:
+      operationId: createUser
+      consumes:
+         - multipart/form-data
+      parameters:
+        - in: formData
+          name: name
+          type: string
+          required: true
+          description: Name.
+        - in: formData
+          name: email
+          type: string
+          required: true
+          description: Email.
+        - in: formData
+          name: password
+          type: string
+          required: true
+          description: Password.
+        - in: formData
+          name: profileImage
+          type: string
+          format: binary
+          required: true
+          description: Profile image.
+      x-google-backend:
+        address: https://us-east1-master-thesis-353609.cloudfunctions.net/createUser
+      responses:
+        '200':
+          description: OK
+        '400':
+          description: BAD_REQUEST

@@ -1,0 +1,17 @@
+{
+  "name": "test-app",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "func start",
+    "test": "echo \"No tests yet...\""
+  },
+  "dependencies": {
+    "@azure/storage-blob": "12.10.0",
+    "bcrypt": "5.0.1",
+    "lambda-multipart-parser": "1.0.1",
+    "mysql": "2.18.1",
+    "sharp": "0.30.4"
+  },
+  "devDependencies": {}
+}
