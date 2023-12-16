@@ -10,6 +10,7 @@
 
 # secrets
 .env
+.credentials
 
 # function dependencies
 node_modules
