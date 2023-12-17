@@ -5,11 +5,10 @@
   "main": "index.js",
   "dependencies": {
     "aws-sdk": "2.1130.0",
-    "bcrypt": "5.0.1",
+    "bcrypt": "5.1.1",
     "lambda-multipart-parser": "1.0.1",
     "mysql": "2.18.1"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
