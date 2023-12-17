@@ -1,2 +1,22 @@
 # macOS specific files
 .DS_Store
+
+# local .terraform directories
+**/.terraform/*
+
+# terraform plan file
+*.plan
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# .tfvars files
+*.tfvars
+
+# secrets
+.env
+.credentials
+
+# function dependencies
+node_modules
