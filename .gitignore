@@ -4,15 +4,11 @@
 # local .terraform directories
 **/.terraform/*
 
-# terraform plan file
-*.plan
-
-# .tfstate files
+# .tf files
 *.tfstate
 *.tfstate.*
-
-# .tfvars files
 *.tfvars
+*.tfplan
 
 # secrets
 .env

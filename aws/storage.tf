@@ -8,7 +8,7 @@ resource "aws_s3_bucket_acl" "profile_image_bucket" {
 resource "aws_s3_bucket" "thumbnail_bucket" {}
 
 resource "aws_s3_bucket_acl" "thumbnail_bucket" {
-  bucket = aws_s3_bucket.profile_image_bucket.id
+  bucket = aws_s3_bucket.thumbnail_bucket.id
   acl    = "private"
 }
 
