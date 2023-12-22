@@ -8,9 +8,9 @@ There are three directories for each CSP:
 ## Deploying
 
 From each directory, do:
-1. Run ` npm install --cpu=<cpu> --os=<os> -f` in all '/functions/{functionName}' to install the correct version of the function dependencies for each deployment environment.
-    - For `bcrypt`, if that fails, go to `node_modules/bcrypt` and run `node-pre-gyp install --target_arch=<arch> --target_platform=<os> --update-binary (--target_libc=<libc>)`
-    - For `sharp`, if that fails, run `npm install -f @img/sharp-<os>-<arch>` and `npm install -f @img/sharp-libvips-<os>-<arch>`
+1. Run ` npm install --cpu=<arch> --os=<platform> -f` in all '/functions/{functionName}' to install the correct version of the function dependencies for each deployment environment.
+    - For `bcrypt`, if that fails, go to `node_modules/bcrypt` and run `node-pre-gyp install --target_arch=<arch> --target_platform=<platform> --update-binary (--target_libc=<libc>)`
+    - For `sharp`, if that fails, run `npm install -f @img/sharp-<platform>-<arch>` and `npm install -f @img/sharp-libvips-<platform>-<arch>`
 1. Create '.env' from '.example.env' and run `source .env`
 1. If applicable, create 'terraform.auto.tfvars' from 'terraform.auto.tfvars.example'
 1. Run `terraform <init/login/plan/apply>` 
