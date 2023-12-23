@@ -31,7 +31,7 @@ paths:
           required: true
           description: Profile image.
       x-google-backend:
-        address: https://us-east1-master-thesis-353609.cloudfunctions.net/createUser
+        address: https://us-east1-thesis-408323.cloudfunctions.net/createUser
       responses:
         '200':
           description: OK

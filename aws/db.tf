@@ -136,7 +136,7 @@ resource "aws_db_instance" "default" {
   engine                 = "mysql"
   engine_version         = "5.7"
   instance_class         = "db.t3.micro"
-  db_name                = "seeu"
+  db_name                = "seeu_db"
   username               = "admin"
   password               = "admin123"
   apply_immediately      = true

@@ -38,7 +38,7 @@ resource "google_storage_bucket_object" "function_process_image" {
 resource "google_cloudfunctions_function" "create_user" {
   name        = "createUser"
   description = "Create user"
-  runtime     = "nodejs14"
+  runtime     = "nodejs16"
 
   available_memory_mb   = 512
   source_archive_bucket = google_storage_bucket.functions_bucket.name
@@ -59,7 +59,7 @@ resource "google_cloudfunctions_function" "create_user" {
 resource "google_cloudfunctions_function" "process_image" {
   name        = "processImage"
   description = "Process image"
-  runtime     = "nodejs14"
+  runtime     = "nodejs16"
 
   available_memory_mb   = 512
   source_archive_bucket = google_storage_bucket.functions_bucket.name

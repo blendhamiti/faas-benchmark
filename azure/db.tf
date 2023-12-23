@@ -18,7 +18,7 @@ resource "azurerm_mysql_server" "mysql_server" {
 }
 
 resource "azurerm_mysql_database" "mysql_database" {
-  name                = "seeu"
+  name                = "seeu_db"
   resource_group_name = azurerm_resource_group.resource_group.name
   server_name         = azurerm_mysql_server.mysql_server.name
   charset             = "utf8"

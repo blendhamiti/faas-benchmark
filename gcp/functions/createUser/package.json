@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "@google-cloud/functions-framework": "^3.1.2",
-    "@google-cloud/storage": "6.0.0",
+    "@google-cloud/functions-framework": "^3.3.0",
+    "@google-cloud/storage": "^7.7.0",
     "bcrypt": "5.1.1",
     "lambda-multipart-parser": "1.0.1",
     "mysql": "2.18.1"
