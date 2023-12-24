@@ -20,6 +20,8 @@ resource "google_sql_database_instance" "instance" {
   name             = "seeu-gcp-db"
   database_version = "MYSQL_5_7"
 
+  deletion_protection = false
+
   depends_on = [google_service_networking_connection.private_vpc_connection]
 
   settings {
