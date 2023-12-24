@@ -98,3 +98,21 @@ data "azurerm_storage_account_blob_container_sas" "storage_account_blob_containe
     list   = false
   }
 }
+
+resource "azurerm_eventgrid_event_subscription" "eventgrid_event_subscription" {
+  name  = "app-eventgrid-event-subscription"
+  scope = azurerm_storage_account.storage_account.id
+
+  included_event_types  = ["Microsoft.Storage.BlobCreated"]
+  event_delivery_schema = "EventGridSchema"
+
+  subject_filter {
+    subject_begins_with = "/blobServices/default/containers/profile-images"
+  }
+
+  webhook_endpoint {
+    # You can copy the function URL in the Azure portal after the function is created.
+    url = "https://blend-thesis-function-app.azurewebsites.net/runtime/webhooks/EventGrid?functionName=ProcessImage&code=uwhZ2xnTHn8KoGy7JlWZrXAIpfcmim5b5s7f4hNpXjQuAzFugFm2WA=="
+  }
+
+}

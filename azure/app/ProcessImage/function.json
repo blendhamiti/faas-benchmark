@@ -1,11 +1,9 @@
 {
   "bindings": [
     {
-      "name": "myBlob",
-      "type": "blobTrigger",
-      "direction": "in",
-      "path": "profile-images/user-{id}/profile-image.jpg",
-      "connection": "AzureWebJobsStorage"
+      "type": "eventGridTrigger",
+      "name": "eventGridEvent",
+      "direction": "in"
     }
   ]
 }
